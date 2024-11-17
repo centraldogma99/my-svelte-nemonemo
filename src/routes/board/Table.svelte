@@ -69,12 +69,12 @@
 	}
 </script>
 
-<table class="border-collapse border-2 border-black">
+<table class="table-fixed border-collapse border-2 border-[#555555]">
 	<tbody>
 		<tr>
 			<td></td>
 			{#each colHints as colHint}
-				<td class="text-center align-bottom leading-5">
+				<td class="p-1 text-center align-bottom leading-5">
 					{#each colHint as hint}
 						{hint}
 						<br />
@@ -84,7 +84,7 @@
 		</tr>
 		{#each table as row, i}
 			<tr>
-				<td class="text-right">{rowHints[i].join(' ')}</td>
+				<td class="p-1 text-right">{rowHints[i].join(' ')}</td>
 				{#each row as cell, j}
 					<Cell
 						status={cell}
