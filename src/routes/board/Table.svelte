@@ -74,7 +74,12 @@
 		<tr>
 			<td></td>
 			{#each colHints as colHint}
-				<td class="text-center align-bottom leading-5">{colHint}<br /></td>
+				<td class="text-center align-bottom leading-5">
+					{#each colHint as hint}
+						{hint}
+						<br />
+					{/each}
+				</td>
 			{/each}
 		</tr>
 		{#each table as row, i}
